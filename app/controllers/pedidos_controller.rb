@@ -10,6 +10,7 @@ class PedidosController < ApplicationController
         render json: pedido.errors, status: :unprocessable_entity
       end
   end
+  render :create
 
   def destroy
     Pedido.find(params[:id]).destroy!
